@@ -52,8 +52,8 @@ const request = https.request(url,options,function(response){
 app.post("/failure",function(req,res){
     res.redirect("/");
 });
-
-app.listen(3010,function(){
+let port=process.env.PORT||3010;
+app.listen(port,function(){
     console.log("server is running properly on 3010");
 
 });
